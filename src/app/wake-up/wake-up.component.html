@@ -1,10 +1,22 @@
 <div *ngIf="myCharacter?.progress === 1">
-<h1>You're up! Where's your pants?</h1>
+<h1>You're up! Where's your pants? Time for breakfast?</h1>
 <br>
-<select class="" name="">
-  <option value="foundPants">Look harder for them</option>
-  <option value="noPants">Screw it, no pants</option>
+<select class="" name="" #option>
+  <option value="1">Pancakes!</option>
+  <option value="2">No time, but there's my beer I didnt finish last night</option>
 </select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+<div *ngIf="myCharacter?.progress === 2">
+<h1>Crap, you're running late.</h1>
+<br>
+<select class="" name="" #option>
+  <option value="3">Take Uber</option>
+  <option value="4">Ride Bike</option>
+  <option value="5">Run</option>
+</select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
 
 </div>
 

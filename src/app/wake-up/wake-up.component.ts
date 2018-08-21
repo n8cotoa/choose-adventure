@@ -17,8 +17,29 @@ export class WakeUpComponent implements OnInit {
   ngOnInit() {
     this.adventureService.getCharacter().subscribe(characterList => {
       this.myCharacter = characterList[0];
-      console.log(this.myCharacter.progress)
     });
   }
+
+  nextPage(characterToUpdate, value) {
+    if (value == 2) {
+      characterToUpdate.sobriety -= 10
+      characterToUpdate.progress += 1
+    } else if (value == 3 && characterToUpdate.money >= 100) {
+      characterToUpdate.money -= 100
+      characterToUpdate.progress += 1
+    } else if (value == 4 ) {
+      characterToUpdate.health -= 80
+      characterToUpdate.progress += 1
+    }
+    return characterToUpdate
+  }
+
+  beginUpdatingCharacter(characterToUpdate, option) {
+    let newCharacter = this.nextPage(characterToUpdate, option)
+    this.adventureService.updateCharacter(newCharacter)
+  }
+
+
+
 
 }

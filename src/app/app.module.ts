@@ -26,7 +26,7 @@ export const firebaseConfig = {
     CharacterCreationComponent,
     SplashComponent,
     WakeUpComponent,
-    StatusBarComponent
+    StatusBarComponent,
   ],
   imports: [
     BrowserModule,

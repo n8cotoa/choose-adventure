@@ -1,3 +1,5 @@
 .status-bar {
-  margin-top: 200px;
+ margin-top: 200px;
+ padding: 10px;
+ border: solid 2px;
 }
