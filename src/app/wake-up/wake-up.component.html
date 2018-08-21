@@ -1,23 +1,130 @@
 <div *ngIf="myCharacter?.progress === 1">
-<h1>You're up! Where's your pants? Time for breakfast?</h1>
-<br>
-<select class="" name="" #option>
-  <option value="1">Pancakes!</option>
-  <option value="2">No time, but there's my beer I didnt finish last night</option>
-</select>
-<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+  <h1>You're up! Where's your pants? Time for breakfast?</h1>
+  <br>
+  <select class="" name="" #option>
+    <option value="1">Pancakes!</option>
+    <option value="2">No time, but there's my beer I didnt finish last night</option>
+  </select>
+  <button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
 </div>
 
 <div *ngIf="myCharacter?.progress === 2">
-<h1>Crap, you're running late.</h1>
+  <h1>Crap, you're running late.</h1>
+  <br>
+  <select class="" name="" #option>
+    <option value="3">Take Uber</option>
+    <option value="4">Ride Bike</option>
+    <option value="5">Run</option>
+  </select>
+  <button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+<div *ngIf="myCharacter?.progress === 3">
+<h1>You made it! </h1>
 <br>
 <select class="" name="" #option>
-  <option value="3">Take Uber</option>
-  <option value="4">Ride Bike</option>
-  <option value="5">Run</option>
+  <option value="6">Do Work</option>
+  <option value="7">Sneak out for beer</option>
 </select>
 <button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
-
 </div>
+
+<!-- fired story -->
+<div *ngIf="myCharacter?.progress === 100">
+<h1> Oh shit, you're late. Boss caught you, you're fired. Idiot.</h1>
+<br>
+<select class="" name="" #option>
+  <option value="8">Yell at your boss!</option>
+  <option value="9">"Fuck you, fuck you, fuck you, you're cool, PEACE im outta here!" To the pub! </option>
+</select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+<div *ngIf="myCharacter?.progress === 101">
+<h1> You got arrested, game over</h1>
+</div>
+
+<div *ngIf="myCharacter?.progress === 103">
+<h1> You walked out with style, and am now drunk. What next?</h1>
+<br>
+<select class="" name="" #option>
+  <option value="10">Tequilla!!</option>
+  <option value="11">Go home and cry</option>
+</select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+<div *ngIf="myCharacter?.progress === 104">
+<h1> Well, now you're plastered and the bartender kicked you out. That alley looks comfortable... </h1>
+<br>
+<select class="" name="" #option>
+  <option value="12">Pass out...</option>
+</select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+<div *ngIf="myCharacter?.progress === 105">
+<h1> There's a racoon on the walk home </h1>
+<br>
+<select class="" name="" #option>
+  <option value="13">Ignore it</option>
+  <option value="14">Yell at it</option>
+</select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+<div *ngIf="myCharacter?.progress === 106">
+<h1> You got mugged, no more money dude. Game over</h1>
+</div>
+
+<div *ngIf="myCharacter?.progress === 107">
+<h1>Oh Shit, they're attacking</h1>
+<br>
+<select class="" name="" #option>
+  <option value="15">Good thing you know Kung Fu!!!</option>
+  <option value="16">Run and scream</option>
+</select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+<div *ngIf="myCharacter?.progress === 108">
+<h1> Shit, now you're hungry</h1>
+</div>
+
+<!-- work story -->
+<div *ngIf="myCharacter?.progress === 200">
+<h1>*Type type type* Boring. Lunch?</h1>
+<br>
+<select class="" name="" #option>
+  <option value="17">Sad desk lunch</option>
+  <option value="18">How about a lunch beer?</option>
+</select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+<div *ngIf="myCharacter?.progress === 201">
+<h1>UGHHH FUCK WORK</h1>
+<br>
+<select class="" name="" #option>
+  <option value="19">keep working...</option>
+  <option value="20">*cough cough* there's a tickle in my throat boss!</option>
+</select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+<div *ngIf="myCharacter?.progress === 202">
+<h1>You ran to the pub for a quick pint, but on the way back, a crazy guy is talking about scientology</h1>
+<br>
+<select class="" name="" #option>
+  <option value="21">Listen to him</option>
+  <option value="22">Punch him</option>
+</select>
+<button type="button" name="button" (click)="beginUpdatingCharacter(myCharacter, option.value)">Next</button>
+</div>
+
+
+
+
+
 
 <app-status-bar></app-status-bar>
