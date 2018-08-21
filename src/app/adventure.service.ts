@@ -4,17 +4,24 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 
 @Injectable()
 export class AdventureService {
-  character: FirebaseListObservable<any[]>;
+  characters: FirebaseListObservable<any[]>;
+  characterId;
 
   constructor(private database: AngularFireDatabase) {
-    this.character = database.list('character');
+    this.characters = database.list('character');
   }
 
   getCharacter(){
-    return this.character;
+    return this.characters;
   }
 
   uploadCharacter(newCharacter: Character) {
-    this.character.push(newCharacter);
+    this.characters.push(newCharacter);
   }
+
+  removeAllCharacters() {
+    this.characters.remove();
+  }
+
+
 }

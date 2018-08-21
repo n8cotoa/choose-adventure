@@ -4,7 +4,8 @@ export class Character {
     public status: string,
     public money: number,
     public health: number,
-    public sobriety: number
+    public sobriety: number,
+    public progress: number
   ) {}
 
 }
