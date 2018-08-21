@@ -50,7 +50,7 @@ export class WakeUpComponent implements OnInit {
       characterToUpdate.money -= 100
       characterToUpdate.progress = 104
     } else if (value == 11 ) {
-      characterToUpdate.progress += 105
+      characterToUpdate.progress = 105
     } else if (value == 12 ) {
       characterToUpdate.progress = 106
     } else if (value == 13 ) {
@@ -60,14 +60,14 @@ export class WakeUpComponent implements OnInit {
     } else if (value == 15 ) {
       characterToUpdate.progress = 109
       characterToUpdate.health = 0
-    } else if (value == 15 ) {
+    } else if (value == 16 ) {
       characterToUpdate.progress = 108
       characterToUpdate.health  -= 20
       // 16
     } else if (value == 17) {
       characterToUpdate.progress = 201
       characterToUpdate.health  += 20
-      characterToUpdate.sobriety  = 100
+      characterToUpdate.sobriety = 100
     } else if (value == 18 ) {
       characterToUpdate.progress = 202
       characterToUpdate.sobriety  -= 20
