@@ -1,0 +1,15 @@
+<form>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" name="name" class="form-control" #name>
+  </div>
+  <div class="form-group">
+    <label for="name">Status:</label>
+    <select class="form-control" name="status" #status>
+      <option value="Rich">Rich</option>
+      <option value="Middle Class">Middle Class</option>
+      <option value="Poor">Poor</option>
+    </select>
+  </div>
+  <button type="button" class="btn btn-success" (click)="wakeUp(name.value, status.value)">Wake Up</button>
+</form>
